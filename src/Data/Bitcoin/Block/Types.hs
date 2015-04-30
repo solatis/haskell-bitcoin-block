@@ -48,7 +48,7 @@ instance Binary Block where
 
     put (Block h cb txs) = do
         put h
-        put $ VarInt $ fromIntegral $ (length txs) + 1
+        put $ VarInt $ fromIntegral $ length txs + 1
         put cb
         forM_ txs put
 

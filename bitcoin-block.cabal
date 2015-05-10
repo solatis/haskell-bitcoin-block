@@ -1,6 +1,6 @@
 name: bitcoin-block
 category: Network, Finance
-version: 0.12.0
+version: 0.9.0
 license: MIT
 license-file: LICENSE
 copyright: (c) 2015 Leon Mergen
@@ -34,6 +34,7 @@ library
                      , hexstring
                      , cryptohash
                      , largeword
+                     , lens
                      
                      , bitcoin-tx
                      , bitcoin-types

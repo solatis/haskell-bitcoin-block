@@ -4,13 +4,14 @@ module Data.Bitcoin.Block ( decode
                           , Block (..)
                           , BlockHeader (..) ) where
 
-import qualified Data.Binary                    as B (encode)
+import           Control.Lens             ((^.))
+import qualified Data.Binary              as B (encode)
 
-import qualified Data.ByteString                as BS (reverse)
-import qualified Data.ByteString.Lazy           as BSL (toStrict)
+import qualified Data.ByteString          as BS (reverse)
+import qualified Data.ByteString.Lazy     as BSL (toStrict)
 
-import qualified Crypto.Hash.SHA256             as Sha256
-import qualified Data.HexString                 as HS
+import qualified Crypto.Hash.SHA256       as Sha256
+import qualified Data.HexString           as HS
 
 import           Data.Bitcoin.Block.Types
 
@@ -32,4 +33,4 @@ headerHash block =
   let sha256d = Sha256.hash . Sha256.hash
       bytes   = BSL.toStrict . B.encode
 
-  in HS.fromBytes . BS.reverse . sha256d . bytes $ blockHeader block
+  in HS.fromBytes . BS.reverse . sha256d . bytes $ (block ^. blockHeader)

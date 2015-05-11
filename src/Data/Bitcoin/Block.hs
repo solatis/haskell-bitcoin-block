@@ -1,8 +1,7 @@
 module Data.Bitcoin.Block ( decode
                           , encode
                           , headerHash
-                          , Block (..)
-                          , BlockHeader (..) ) where
+                          , module Data.Bitcoin.Block.Types) where
 
 import           Control.Lens             ((^.))
 import qualified Data.Binary              as B (encode)

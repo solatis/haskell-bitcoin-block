@@ -3,7 +3,7 @@ module Data.Bitcoin.Block ( decode
                           , headerHash
                           , module Data.Bitcoin.Block.Types) where
 
-import           Control.Lens             ((^.))
+import           Lens.Micro               ((^.))
 import qualified Data.Binary              as B (encode)
 
 import qualified Data.ByteString          as BS (reverse)

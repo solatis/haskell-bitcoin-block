@@ -8,7 +8,7 @@ import           Data.Binary.Get          (getByteString, getWord32le)
 
 import           Data.Binary.Put          (putByteString, putWord32le)
 
-import           Control.Lens.TH          (makeLenses)
+import           Lens.Micro.TH            (makeLenses)
 import           Control.Monad            (forM_, replicateM)
 
 import qualified Data.ByteString          as BS

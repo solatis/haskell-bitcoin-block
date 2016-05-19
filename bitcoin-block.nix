@@ -7,7 +7,7 @@ mkDerivation {
   src = ./.;
   buildDepends = [
     base binary bitcoin-tx bitcoin-types bytestring cryptohash
-    hexstring largeword lens
+    hexstring largeword microlens microlens-th
   ];
   testDepends = [
     base bitcoin-tx bitcoin-types bytestring hexstring hspec

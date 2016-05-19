@@ -34,7 +34,8 @@ library
                      , hexstring
                      , cryptohash
                      , largeword
-                     , lens
+                     , microlens
+                     , microlens-th
                      
                      , bitcoin-tx
                      , bitcoin-types
